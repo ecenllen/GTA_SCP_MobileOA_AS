@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/task_image_head"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/app_icon" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/task_image_head"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp" >
+
+            <TextView
+                android:id="@+id/task_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2015-01-20 12:21"
+                android:textColor="#8d8d8d" />
+
+            <TextView
+                android:id="@+id/task_people_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="梁建彬" />
+
+            <TextView
+                android:id="@+id/task_processName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/task_time_text"
+                android:layout_toRightOf="@+id/task_people_name"
+                android:singleLine="true"
+                android:text="-梁建彬" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/task_tittle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/task_people_name"
+                android:singleLine="true"
+                android:text="请假申请"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

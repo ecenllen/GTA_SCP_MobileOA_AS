@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:orientation="vertical" >
+
+    <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/meeti_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.gta.scpoa.views.CommonTopView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/officialdetail_title_bg"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.gta.scpoa.views.BaseView
+        android:id="@+id/notice_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/meeting_attach_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/officialdetail_white_bg" >
+        </ListView>
+    </com.gta.scpoa.views.BaseView>
+
+</LinearLayout>

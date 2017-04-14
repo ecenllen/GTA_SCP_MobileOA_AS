@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/task_detail_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.gta.scpoa.views.CommonTopView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/task_detail_tabBg1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_checked" >
+
+            <TextView
+                android:id="@+id/task_detail_tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="意见"
+                android:textColor="#FFA749"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/task_detail_tabBg2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_default" >
+
+            <TextView
+                android:id="@+id/task_detail_tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="流程图"
+                android:textColor="#8E8E90"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/task_detail_tabBg3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_default" >
+
+            <TextView
+                android:id="@+id/task_detail_tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="审批历史"
+                android:textColor="#8E8E90"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+    
+    <FrameLayout 
+        android:id="@+id/task_fragment"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        />
+    
+</LinearLayout>

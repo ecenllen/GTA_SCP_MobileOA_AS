@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/task_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.gta.scpoa.views.CommonTopView>
+
+    <!-- 搜索 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#D6D6D6" >
+
+        <com.gta.scpoa.views.SearchEditText
+            android:id="@+id/task_search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bar_edit_selector"
+            android:drawableLeft="@drawable/ic_zoom"
+            android:hint="@string/edit_text_search"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:windowSoftInputMode="adjustResize" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/task_bottom_view"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <RelativeLayout
+                    android:id="@+id/task_tabBg1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_checked" >
+
+                    <TextView
+                        android:id="@+id/task_tab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="待办事项"
+                        android:textColor="#FFA749" />
+
+                    <TextView
+                        android:id="@+id/task_tab1_num_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/task_tab1"
+                        android:background="@drawable/tab_in"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_11" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/task_tabBg2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_default" >
+
+                    <TextView
+                        android:id="@+id/task_tab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="已办事项"
+                        android:textColor="#8E8E90" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <com.gta.scpoa.views.XListView
+                    android:id="@+id/taskMainListview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </com.gta.scpoa.views.XListView>
+
+                <TextView
+                    android:id="@+id/task_notdata_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="暂无数据"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.gta.scpoa.views.CommonBottomView
+            android:id="@+id/task_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+        </com.gta.scpoa.views.CommonBottomView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,289 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_top_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/write_people_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical" >
+
+            <!-- 收件人 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/wrier_mail_reciver_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="  收件人:" />
+
+                <ImageView
+                    android:id="@+id/add_reciver_image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/add_prople_bg" />
+
+                <HorizontalScrollView
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_toLeftOf="@+id/add_reciver_image"
+                    android:layout_toRightOf="@+id/wrier_mail_reciver_text" 
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                     android:scrollbars="none"
+                    >
+                <TextView
+                    android:id="@+id/write_mail_reciver_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp" />
+                </HorizontalScrollView>
+               
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#D6D6D6" />
+
+            <!-- 抄送人 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/wrier_mail_copyer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="  抄送人:" />
+
+                <ImageView
+                    android:id="@+id/add_copyer_image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/add_prople_bg" />
+                
+                <HorizontalScrollView
+                    android:layout_toLeftOf="@+id/add_copyer_image"
+                    android:layout_toRightOf="@+id/wrier_mail_copyer_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                     android:scrollbars="none"
+                    >
+                <TextView
+                    android:id="@+id/write_mail_copyer_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp" />
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#D6D6D6" />
+
+            <!-- 密送人 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/wrier_mail_Secretor_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="  密送人:" />
+
+                <ImageView
+                    android:id="@+id/add_Secretor_image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/add_prople_bg" />
+
+                <HorizontalScrollView
+                   	android:layout_toLeftOf="@+id/add_Secretor_image"
+                    android:layout_toRightOf="@+id/wrier_mail_Secretor_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                     android:scrollbars="none"
+                    >
+                <TextView
+                    android:id="@+id/write_mail_Secretor_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp" />
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#D6D6D6" />
+
+            <!-- 主题 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/wrier_mail_subject_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text=" 邮件主题:" />
+
+                <EditText
+                    android:id="@+id/write_mail_subject_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/wrier_mail_subject_text"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:maxLength="50"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#D6D6D6" />
+
+        <RelativeLayout
+            android:id="@+id/write_mail_edit_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+             >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- 添加附件 -->
+
+            <RelativeLayout
+                android:id="@+id/tempLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/wrier_mail_attach_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="附  件:" />
+
+                <ImageView
+                     android:id="@+id/add_attach_file"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/attach_file" />
+
+                <ImageView
+                    android:id="@+id/add_attach_image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/add_attach_file"
+                    android:src="@drawable/attach_pic" />
+
+                <TextView
+                    android:id="@+id/file_size_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/add_attach_image"
+                    android:layout_toRightOf="@+id/wrier_mail_attach_text"
+                    android:gravity="center_vertical"
+                    android:text="(0个文件,0KB)" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/write_mail_attach_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/write_mail_send_btn"
+                android:layout_below="@+id/tempLayout1" >
+            </ListView>
+
+            <Button
+                android:id="@+id/write_mail_send_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/logout_btn_selector"
+                android:text="发送"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/contact_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+    </com.gta.scpoa.views.CommonTopView>
+
+    <com.gta.scpoa.views.CommonBottomView
+        android:id="@+id/contact_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.gta.scpoa.views.CommonBottomView>
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_top_view"
+        android:background="#D6D6D6" >
+
+        <com.gta.scpoa.views.SearchEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bar_edit_selector"
+            android:drawableLeft="@drawable/ic_zoom"
+            android:hint="@string/edit_text_search"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:windowSoftInputMode="adjustResize"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/oneself_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_checked"
+            android:text="@string/oneself_tab"
+            android:textColor="#FFA749" />
+
+        <TextView
+            android:id="@+id/teacher_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_default"
+            android:text="@string/teacher_tab"
+            android:textColor="#8E8E90" />
+
+        <TextView
+            android:id="@+id/common_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_default"
+            android:text="@string/common_tab"
+            android:textColor="#8E8E90" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/tab_layout"
+        android:background="#FFFFFF" />
+
+    <LinearLayout android:id="@+id/ll_show"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/contact_bottom_view"
+        android:layout_below="@id/tt"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF" >
+
+            <ListView
+                android:id="@+id/contact_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:listSelector="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/show_head_toast_bg"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip"
+                android:visibility="invisible" />
+
+            <com.gta.scpoa.views.LetterSideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="20.0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center" />
+
+            <TextView
+                android:id="@+id/notdata_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="暂无数据"
+                android:textColor="@color/gray"
+                android:visibility="gone" />
+
+        </FrameLayout>
+        
+	    <LinearLayout android:id="@+id/ll_check" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:visibility="gone"
+	        android:orientation="horizontal">
+	        <Button android:id="@+id/bt_checkall"
+	            android:layout_width="0dp"
+	            android:layout_height="45dp"
+	            android:layout_weight="1"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="15dp"
+	            android:background="@drawable/dialog_ok_selector"
+	            android:text="@string/check_all"
+	            android:textColor="@color/white"
+	            android:textStyle="normal"/>
+	        
+	         <Button android:id="@+id/bt_checkcancel"
+	            android:layout_width="0dp"
+	            android:layout_height="45dp"
+	            android:layout_weight="1"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"	            
+	            android:background="@drawable/dialog_cancel_selector"
+	            android:text="@string/check_cancel"
+	            android:textColor="@color/white"
+	            android:textStyle="normal"/>           
+	    </LinearLayout>          
+    </LinearLayout>
+    
+  
+
+</RelativeLayout>

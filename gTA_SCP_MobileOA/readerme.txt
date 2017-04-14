@@ -1,0 +1,2 @@
+This store password is "123456"
+alias is "yidong_oa"

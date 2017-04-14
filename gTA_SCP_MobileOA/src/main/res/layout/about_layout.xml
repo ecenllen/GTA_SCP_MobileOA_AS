@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0EFF4" >
+
+    <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+    </com.gta.scpoa.views.CommonTopView>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/logo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_top" >
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/app_icon" />
+
+        <TextView
+            android:id="@+id/tv_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="移动OA V1.0" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/version_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/about_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"
+                android:duplicateParentState="true"
+                android:text="版本更新"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_about_versioncode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_10"
+                android:text="已是最新版本"
+                android:textColor="#878787"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <include layout="@layout/view_separator" />
+
+        <RelativeLayout
+            android:id="@+id/fun_introduction_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/about_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"
+                android:duplicateParentState="true"
+                android:text="功能介绍"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <include layout="@layout/view_separator" />
+
+        <RelativeLayout
+            android:id="@+id/help_feedback_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/about_item_selector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"
+                android:duplicateParentState="true"
+                android:text="帮助和反馈"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

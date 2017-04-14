@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+     <com.gta.scpoa.views.CommonTopView
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.gta.scpoa.views.CommonTopView>
+    
+     <ScrollView
+         	android:layout_height="fill_parent"
+         	android:layout_width="fill_parent" 
+         >
+         <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:orientation="vertical"
+             >
+             <TextView 
+                 android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+                 android:layout_marginLeft="10dp" 
+                 android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="center_vertical|left"
+                 android:text="移动OA V1.0功能介绍"
+                 android:textColor="@color/black"
+                 android:textSize="16dp"
+                 />
+           <include layout="@layout/view_separator" />  
+             
+             <TextView 
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp" 
+                 android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="center_vertical|left"
+                 android:text="1.待办事宜处理,充分利用时间碎片,提高办公效率"
+                 android:textColor="@color/black"
+                 android:textSize="14dp"
+                 />
+             
+             <ImageView 
+                  android:layout_marginTop="5dp"
+                  android:layout_marginLeft="10dp" 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:src="@drawable/introduction1"
+                 />
+             
+              <TextView 
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp" 
+                 android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="center_vertical|left"
+                 android:text="2.内部邮件收发,直接调取教职工通讯录发送邮件,便捷易用"
+                 android:textColor="@color/black"
+                 android:textSize="14dp"
+                 />
+             
+              <LinearLayout
+                  android:layout_marginTop="5dp"
+                  android:layout_marginLeft="10dp" 
+                  android:layout_height="wrap_content"
+                  android:layout_width="fill_parent" 
+                  android:orientation="horizontal"
+                  >
+                  <ImageView 
+                      android:layout_weight="1"
+	                  android:layout_height="wrap_content"
+	                  android:layout_width="wrap_content"
+	                  android:src="@drawable/introduction2"
+                 />
+                  
+                  <ImageView 
+                      android:layout_weight="1"
+	                  android:layout_height="wrap_content"
+	                  android:layout_width="wrap_content"
+	                  android:src="@drawable/introduction3"
+                 />
+              </LinearLayout>
+             
+             
+               <TextView 
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp" 
+                 android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="center_vertical|left"
+                 android:text="3.会议提醒,会议纪要,实时查看会议信息。"
+                 android:textColor="@color/black"
+                 android:textSize="14dp"
+                 />
+             
+             <ImageView 
+                  android:layout_marginTop="5dp"
+                  android:layout_marginLeft="10dp" 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:src="@drawable/introduction4"
+                 />
+              
+             
+               <TextView 
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp" 
+                 android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="center_vertical|left"
+                 android:text="4.日程管理,日程提醒功能,重要日程及时处理"
+                 android:textColor="@color/black"
+                 android:textSize="14dp"
+                 />
+             
+              <LinearLayout
+                  android:layout_marginTop="5dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginBottom="10dp" 
+                  android:layout_height="wrap_content"
+                  android:layout_width="fill_parent" 
+                  android:orientation="horizontal"
+                  >
+                  <ImageView 
+                      android:layout_weight="1"
+	                  android:layout_height="wrap_content"
+	                  android:layout_width="wrap_content"
+	                  android:src="@drawable/introduction5"
+                 />
+                  
+                  <ImageView 
+                      android:layout_weight="1"
+	                  android:layout_height="wrap_content"
+	                  android:layout_width="wrap_content"
+	                  android:src="@drawable/introduction6"
+                 />
+               </LinearLayout>
+         </LinearLayout>
+     </ScrollView>
+
+</LinearLayout>

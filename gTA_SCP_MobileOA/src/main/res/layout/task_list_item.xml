@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.gta.scpoa.views.ui.SwipeLayout
+        android:id="@+id/task_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+           <LinearLayout
+            android:id="@+id/task_ll_menu"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/task_agree_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/resend_nomal_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/task_agree" />
+
+                <TextView
+                    android:id="@+id/task_agree_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="  同 意  "
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        
+        <include
+            android:layout_gravity="center_vertical"
+            android:layout_height="68dp"
+            android:layout_width="fill_parent"
+            layout="@layout/task_main_item"
+            />
+    </com.gta.scpoa.views.ui.SwipeLayout>
+
+</LinearLayout>

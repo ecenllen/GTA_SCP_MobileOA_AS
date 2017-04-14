@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_top_bar" />
+
+    <RelativeLayout
+        	android:layout_height="fill_parent"
+        	android:layout_width="fill_parent" 
+        >
+   
+        <Button 
+            android:id="@+id/recive_delete_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/logout_btn_selector"
+            android:text="删除"
+            android:textColor="@color/white"
+            />
+        
+    <ScrollView
+        android:layout_above="@+id/recive_delete_btn"
+        android:id="@+id/recive_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/subjectText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:maxLines="3"
+                android:text="主题     这个收件箱    "
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/mail_people_layout" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <!-- 正文 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="正文" />
+
+             <WebView
+                android:id="@+id/reciveWebView"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            
+            <LinearLayout
+                	android:layout_height="wrap_content"
+                	android:layout_width="fill_parent"
+                	android:orientation="horizontal" 
+                	android:layout_marginLeft="5dp"
+                >
+                 <TextView
+                    android:id="@+id/recive_mail_attach_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="right"
+                    android:text="附件:" />
+               
+               <TextView 
+                    android:id="@+id/recive_file_size_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="(0个文件,0KB)"
+                    />
+            </LinearLayout>
+           
+            
+              
+               
+            <com.gta.scpoa.views.myListView
+                	android:layout_marginBottom="10dp"
+                	android:id="@+id/recive_attach_listview"
+                	android:layout_height="wrap_content"
+                	android:layout_width="fill_parent" 
+                >
+            </com.gta.scpoa.views.myListView>
+        </LinearLayout>
+    </ScrollView>
+ </RelativeLayout>
+</LinearLayout>

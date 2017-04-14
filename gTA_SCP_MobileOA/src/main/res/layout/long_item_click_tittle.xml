@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/long_item_click_tittle"
+    android:background="@drawable/common_top_bar_bg"
+    android:padding="4dp" >
+    
+    <!-- 左边 -->
+      <ImageButton
+        android:id="@+id/long_item_back_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space_8"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/common_top_back"
+         />
+    
+      <View 
+          android:id="@+id/temp_view1"
+          android:layout_toRightOf="@+id/long_item_back_ibtn"
+          android:layout_height="30dp"
+          android:layout_width="1dp"
+          android:background="@color/white"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="8dp"
+          />
+      
+      <TextView
+        android:id="@+id/delete_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/temp_view1"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+      <!-- 中间 -->
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="邮箱"
+          android:textSize="18dp"
+          android:textColor="@color/white" 
+          />
+      
+      <!-- 右边 -->
+      
+      <TextView
+          android:id="@+id/delete_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:text="删除"
+          android:textSize="18dp"
+          android:textColor="@color/white"
+        />
+      
+       <View 
+          android:id="@+id/temp_view2"
+          android:layout_toLeftOf="@+id/delete_text"
+          android:layout_height="30dp"
+          android:layout_width="1dp"
+          android:background="@color/white"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="8dp"
+          />
+       
+       <TextView
+           android:id="@+id/restore_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="8dp"
+           android:layout_toLeftOf="@+id/temp_view2"
+           android:text="恢复"
+           android:textColor="@color/white"
+           android:textSize="18dp" />
+
+ </RelativeLayout>

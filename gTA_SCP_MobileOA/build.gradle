@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+def InnerVersionName = new Date().format('yyMMdd')
+
+/**采用解析Properties文件获取签名信息的方式，把签名放进版本控制不是明智的做法*/
+Properties props = new Properties()
+props.load(new FileInputStream(file("signing.properties")))
+
+android {
+
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+    defaultConfig {
+        applicationId "com.gta.scpoa"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 2
+      versionName "1.0.1"
+    }
+
+    //签名配置
+    signingConfigs {
+        release {
+            keyAlias props['KEY_ALIAS']
+            keyPassword props['KEY_PASSWORD']
+            storeFile file(props['KEYSTORE_FILE'])
+            storePassword props['KEYSTORE_PASSWORD']
+        }
+    }
+
+    buildTypes {
+        release {
+            //签名
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //混淆
+            minifyEnabled false
+            debuggable true
+
+            /*正式 JpushKey：0518dd9ae572ff43250ef523*/
+            resValue "string", "JpushKey", "8db14041bf406896f6f569a9"
+        }
+
+        debug {
+            //签名
+            signingConfig signingConfigs.release
+            /*测试 JpushKey：d326d32f8df3a0dcb656f04e*/
+            resValue "string", "JpushKey", "8db14041bf406896f6f569a9"
+            minifyEnabled false
+            debuggable true
+        }
+
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+
+    /*为apk自动替换生成新名字，格式如： [项目名]_[test/release]_[version]_[date].apk*/
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent,
+                    output.outputFile.name
+                            .replace("-debug", "_test")
+                            .replace("app", "GTA_SCP_OA")
+                            .replace(".apk",
+                            "_" + defaultConfig.versionName
+                                    + "_" + InnerVersionName + ".apk")
+            )
+        }
+    }
+
+}
+
+dependencies {
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':gTABaseLibrary')
+    compile project(':l_jpush')
+    compile 'com.android.support:support-v4:24.1.0'
+    compile files('libs/fastjson-1.1.34.android.jar')
+    compile 'me.leolin:ShortcutBadger:1.1.13@aar'
+}
